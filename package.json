@@ -1,0 +1,12 @@
+{
+  "name": "momi-css",
+  "version": "1.0.0",
+  "author": "development7777",
+  "license": "MIT",
+  "description": "Modern and minimalist CSS.",
+  "files": [
+    "src/",
+    "dist/",
+    "README.md"
+  ]
+}
