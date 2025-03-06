@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>momi-css Test</title>
+</head>
+<body>
+    <h1>HTML XHTML for CSS Testing</h1>
+    <!-- Sample Content to Plugin to Template -->
+    <h1>CSS の基本的な要素</h1>
+    
+    <p>この HTML の目的は何のデフォルト設定が CSS を持っているか決定するのを手伝うこと、そして、場所を設計するとき、どんな可能な要素でもミスしないようにすべての可能な HTML 要素がこの HTML に含められることを確認することです。</p>
+    
+    <dl>
+    <dt>Original:</dt>
+    <dd><a href="http://www.sitefromscratch.com/content/html-xhtml-css-testing">HTML XHTML for CSS Testing</a></dd>
+    <dt>Japanese Edition:</dt>
+    <dd><a href="//coliss.com/articles/build-websites/operation/css/1457.html">HTMLの各要素が配置されたスタイルシートのチェック用のテンプレート</a></dd>
+    </dl>
+    
+    <hr />
+    
+    <h1 id="headings">見出し(hn)</h1>
+    
+    <h1>見出し 1</h1>
+    <h2>見出し 2</h2>
+    <h3>見出し 3</h3>
+    <h4>見出し 4</h4>
+    <h5>見出し 5</h5>
+    <h6>見出し 6</h6>
+    
+    <small><a href="#wrapper">[トップ]</a></small>
+    <hr />
+    
+    
+    <h1 id="paragraph">パラグラフ(p)</h1>
+    
+    <img style="width:250px;height:125px;float:right" src="images/css_gods_language.png" alt="CSS | God's Language" />
+    <p>洋酒といえば、誰でも最初に思い浮かべるのがウイスキー。<a href="#" title="テストリンク">テストリンク(a)</a>いわば洋酒のシンボル的な存在なのだが、英語表記が［一般に〔米〕では Whiskey,〔英〕では Whisky.］であることはあまり知られていない。米英両国では、このスペルの差で自国産と輸入品を区別しているという。わが和製ウイスキーの “Whisky”という英国式表示は、手本にしたスコッチのフォルムに倣ったものであり、それ以上の意味はないようだ。カナ表記にしても、ごくまれに〈ウヰスキー〉という書き方を見かけるが、これとて差別化を意図したものではなく単にカナづかいの時代性にすぎない。</p>
+    
+    <p>現在、カナ表記は〈<em>ウイスキー(em)</em>〉に一本化しており、そこに国産・舶来の区別はない。最近は価格面での差もちぢまり、20年前に ￥10,000 だった本場のスコッチが半値近くになるなど、ウイスキーは一層ポピュラーなものになってきた。しかし、消費量についていえば、洋酒のトップは何といってもビールだろう。よっぽどの下戸はともかく、まず誰でもタシナミ程度には口にする。</p>
+    
+    <small><a href="#wrapper">[トップ]</a></small>
+    <hr />
+    
+    <h1 id="list_types">リスト要素</h1>
+    
+    <h3>定義型リスト(dl)</h3>
+    <dl>
+        <dt>定義型リスト　用語</dt>
+        <dd>定義型リスト　定義</dd>
+    </dl>
+    
+    <h3>順序付きリスト(ol)</h3>
+    <ol>
+        <li>リストアイテム 1</li>
+        <li>リストアイテム 2</li>
+        <li>リストアイテム 3</li>
+    </ol>
+    
+    <h3>並列列挙リスト(ul)</h3>
+    <ul>
+        <li>リストアイテム 1</li>
+        <li>リストアイテム 2</li>
+        <li>リストアイテム 3</li>
+    </ul>
+    
+    <small><a href="#wrapper">[トップ]</a></small>
+    <hr />
+    
+    <h1 id="form_elements">フォーム要素</h1>
+    
+    <fieldset>
+        <legend>Legend</legend>
+    
+        <p>もっとも、オッペケペッポーの攻勢に、ぐぅのネを上げた紳士や淑女がいたかどうか…西洋カブレとは、要するに欧米文化への信奉者のこと。〈鰯ノ頭ヲ信心〉する者があるならヨーロッパやアメリカの文物を信仰する者がいても一向に不思議はない。信ずる者の強さで、依然グラス片手に舞踏会、アン・ドゥ・トロヮとやっていたように思われる。</p>
+    
+        <form>
+            <h2>Form Element</h2>
+    
+            <p>憶測になるが、むしろ辛かったのは庶民の中の飲んべぇ連中ではなかったか。ハイカラ族にユサぶりをかけた手前、泰西の酒には手を出しづらい。「なに、ビールだとぉ、べらぼーめ、こちとら人間サマでぃ、カニじゃあるめぇしアブクなんか飲めるかってんだ」などと強がりながらも、サゾ飲みたかったろうという気がする。</p>
+    
+            <p><label for="text_field">テキストフィールド(text)：</label><br />
+            <input type="text" id="text_field" /></p>
+    
+            <p><label for="text_area">テキストエリア(textarea)：</label><br />
+            <textarea id="text_area">&lt;/textarea></p>
+    
+            <p><label for="select_element">セレクト(select)：</label><br />
+                <select name="select_element">
+                <optgroup label="Option Group 1">
+                    <option value="1">オプション 1</option>
+                    <option value="2">オプション 2</option>
+                    <option value="3">オプション 3</option>
+                </optgroup>
+                <optgroup label="Option Group 2">
+                    <option value="1">オプション 1</option>
+                    <option value="2">オプション 2</option>
+                    <option value="3">オプション 3</option>
+                </optgroup>
+            </select></p>
+    
+            <p><label for="radio_buttons">ラジオボタン(radio)：</label><br />
+                <input type="radio" class="radio" name="radio_button" value="radio_1" /> ラジオボタン 1<br/>
+                    <input type="radio" class="radio" name="radio_button" value="radio_2" /> ラジオボタン 2<br/>
+                    <input type="radio" class="radio" name="radio_button" value="radio_3" /> ラジオボタン 3<br/>
+            </p>
+    
+            <p><label for="checkboxes">チェックボックス(checkbox)：</label><br />
+                <input type="checkbox" class="checkbox" name="checkboxes" value="check_1" /> チェックボックス 1<br/>
+                    <input type="checkbox" class="checkbox" name="checkboxes" value="check_2" /> チェックボックス 2<br/>
+                    <input type="checkbox" class="checkbox" name="checkboxes" value="check_3" /> チェックボックス 3<br/>
+            </p>
+    
+            <p><label for="password">パスワード(password)：</label><br />
+                <input type="password" class="password" name="password" />
+            </p>
+    
+            <p><label for="file">ファイル(file)：</label><br />
+                <input type="file" class="file" name="file" />
+            </p>
+    
+    
+            <p><input class="button" type="reset" value="リセット(reset)" /> <input class="button" type="submit" value="サブミット(submit)" />
+            </p>
+    
+    
+    
+        </form>
+    
+    </fieldset>
+    
+    <small><a href="#wrapper">[トップ]</a></small>
+    <hr />
+    
+    <h1 id="tables">テーブル</h1>
+    
+    <table cellspacing="0" cellpadding="0">
+        <tr>
+            <th>テーブルヘッダ(th) 1</th><th>テーブルヘッダ 2</th><th>テーブルヘッダ 3</th>
+        </tr>
+        <tr>
+            <td>セル(td) 1</td><td>セル 2</td><td>セル 3</td>
+        </tr>
+        <tr class="even">
+            <td>セル 1</td><td>セル 2</td><td>セル 3</td>
+        </tr>
+        <tr>
+            <td>セル 1</td><td>セル 2</td><td>セル 3</td>
+        </tr>
+    
+    </table>
+    
+    <small><a href="#wrapper">[トップ]</a></small>
+    <hr />
+    
+    <h1 id="misc">その他</h1>
+    
+    <p>しかし明治32年７月４日、恵比寿ビールのＰＲを目的にしたビアホールが新橋に登場。<sup>上付文字(sup)</sup> dolor <sub>下付文字(sub)</sub>ジャムパン１ヶ２銭の時代に 0.25 リットル５銭でビールの１ぱい売りを始めたことから様相は一転する。レンガづくりのモダンな店ながら、はっぴ姿の車夫も金バッヂの紳士もゼニを払えば平等の客。<cite>引用元：cite</cite>誰はゞかることなくビールをグィとやって舌ツヾミを打てる。当初から評判になって人々がワッと集まり、ファンの数もふえた。<acronym title="National Basketball Association">省略語(acronym)：NBA</acronym>２ヵ月後の９月には中央新聞がその盛況ぶりを図入りで伝えたほどだった。<abbr title="Avenue">省略語(abbr)：AVE</abbr></p>
+    
+    <!-- Crayon Syntax Highlighter v_2.7.2_beta -->
+    
+            <div id="crayon-67c95f58039a8414968910" class="crayon-syntax crayon-theme-solarized-light crayon-font-monaco crayon-os-pc print-yes notranslate crayon-wrapped" data-settings=" minimize scroll-mouseover wrap" style="margin-top: 12px; margin-bottom: 12px; font-size: 12px !important; line-height: 15px !important; height: auto;">
+            
+                <div class="crayon-toolbar" data-settings=" show" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><span class="crayon-title"></span>
+                <div class="crayon-tools" style="font-size: 12px !important;height: 18px !important; line-height: 18px !important;"><div class="crayon-button crayon-nums-button crayon-pressed" title="Toggle Line Numbers"><div class="crayon-button-icon" style="background-size: 48px 128px; background-image: url("https://coliss.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png");"></div></div><div class="crayon-button crayon-plain-button" title="Toggle Plain Code"><div class="crayon-button-icon" style="background-size: 48px 128px; background-image: url("https://coliss.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png");"></div></div><div class="crayon-button crayon-wrap-button crayon-pressed" title="Toggle Line Wrap"><div class="crayon-button-icon" style="background-size: 48px 128px; background-image: url("https://coliss.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png");"></div></div><div class="crayon-button crayon-expand-button" title="Expand Code" style="display: none;"><div class="crayon-button-icon" style="background-size: 48px 128px; background-image: url("https://coliss.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png");"></div></div><div class="crayon-button crayon-copy-button" title="Copy"><div class="crayon-button-icon" style="background-size: 48px 128px; background-image: url("https://coliss.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png");"></div></div><div class="crayon-button crayon-popup-button" title="Open Code In New Window"><div class="crayon-button-icon" style="background-size: 48px 128px; background-image: url("https://coliss.com/wp-content/plugins/crayon-syntax-highlighter/css/images/toolbar/buttons@2x.png");"></div></div></div></div>
+                <div class="crayon-info" style="min-height: 16.8px !important; line-height: 16.8px !important;"></div>
+                <div class="crayon-plain-wrap"><textarea class="crayon-plain print-no" data-settings="dblclick" readonly="" style="tab-size: 4; font-size: 12px !important; line-height: 15px !important; z-index: 0; opacity: 0; overflow: hidden;"><p>この年は西暦1899年。まさに19世紀の〆くくりの年にビールのヌーヴェルバーグがぼっこうしたことになる。恵比寿は文字通り“福の神”となったわけだが、そのころの表記はすべて〈惠比壽〉であり、仮名書きの場合も〈えびす〉・〈エビス〉ならぬ〈ゑびす〉・〈ヱビス〉だった。いかにもゴリヤクのありそうな字ヅラである。<acronym title="National Basketball Association">省略語(acronym)：NBA</acronym>20世紀に入って1906年になると、夏目漱石は小説『二百十日』（中央公論・明治39年10月号）の中で次のようなエピソードを創作した。舞台は阿蘇のひなびた温泉宿。<abbr title="Avenue">省略語(abbr)：AVE</abbr></p></textarea></div>
+                <div class="crayon-main" style="position: relative; z-index: 1; overflow: hidden;">
+                    <table class="crayon-table" style="">
+                        <tbody><tr class="crayon-row">
+                    <td class="crayon-nums " data-settings="show">
+                        <div class="crayon-nums-content" style="font-size: 12px !important; line-height: 15px !important;"><div class="crayon-num" data-line="crayon-67c95f58039a8414968910-1" style="height: 255px;">1</div></div>
+                    </td>
+                            <td class="crayon-code"><div class="crayon-pre" style="font-size: 12px !important; line-height: 15px !important; -moz-tab-size:4; -o-tab-size:4; -webkit-tab-size:4; tab-size:4;"><div class="crayon-line" id="crayon-67c95f58039a8414968910-1"><span class="crayon-h"><</span><span class="crayon-i">p</span><span class="crayon-h">></span>この年は西暦<span class="crayon-cn">1899</span>年。まさに<span class="crayon-cn">19</span>世紀の〆くくりの年にビールのヌーヴェルバーグがぼっこうしたことになる。恵比寿は文字通り“福の神”となったわけだが、そのころの表記はすべて〈惠比壽〉であり、仮名書きの場合も〈えびす〉・〈エビス〉ならぬ〈ゑびす〉・〈ヱビス〉だった。いかにもゴリヤクのありそうな字ヅラである。<span class="crayon-h"><</span><span class="crayon-e">acronym </span><span class="crayon-i">title</span>=<span class="crayon-s">"National Basketball Association"</span><span class="crayon-h">></span>省略語<span class="crayon-sy">(</span><span class="crayon-i">acronym</span><span class="crayon-sy">)</span>：<span class="crayon-i">NBA</span><span class="crayon-h"><</span>/<span class="crayon-i">acronym</span><span class="crayon-h">></span><span class="crayon-cn">20</span>世紀に入って<span class="crayon-cn">1906</span>年になると、夏目漱石は小説『二百十日』（中央公論・明治<span class="crayon-cn">39</span>年<span class="crayon-cn">10</span>月号）の中で次のようなエピソードを創作した。舞台は阿蘇のひなびた温泉宿。<span class="crayon-h"><</span><span class="crayon-e">abbr </span><span class="crayon-i">title</span>=<span class="crayon-s">"Avenue"</span><span class="crayon-h">></span>省略語<span class="crayon-sy">(</span><span class="crayon-i">abbr</span><span class="crayon-sy">)</span>：<span class="crayon-i">AVE</span><span class="crayon-h"><</span>/<span class="crayon-i">abbr</span><span class="crayon-h">></span><span class="crayon-h"><</span>/<span class="crayon-i">p</span><span class="crayon-h">></span></div></div></td>
+                        </tr>
+                    </tbody></table>
+                </div>
+            </div>
+    <!-- [Format Time: 0.0003 seconds] -->
+    
+    
+    
+    <blockquote>
+    ゆ上がりの男２人と「絣の筒袖をつんつるてんに着てゐる」下女のやりとりは、いささかマンザイのボケとツッコミのセリフを思わせるが、ビールもこの時期には日本のスミズミまでじゅうぶんに出回っていたのがわかる。<br />-引用(blockquote)
+    </blockquote>
+    
+    <small><a href="#wrapper">[トップ]</a></small>
+    <!-- End of Sample Content -->
+</body>
+</html>

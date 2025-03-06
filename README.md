@@ -33,6 +33,7 @@ momi-cssは、モダンでミニマルなUIフレームワークです。ほと�
 ├── /src/
 │   ├── /css
 │   └── /js
+├── /test/
 ├── .gitgnore
 ├── LICENCE
 └── README.md
