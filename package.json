@@ -4,6 +4,18 @@
   "author": "development7777",
   "license": "MIT",
   "description": "Modern and minimalist CSS.",
+  "scripts": {
+    "start": "npm run watch",
+    "css": "npm-run-all css-compile css-prefix",
+    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css src/css/:dist/css",
+    "css-prefix": "postcss --replace \"dist/css/*.css\" \"!dist/css/*.min.css\"",
+    "js": "npm-run-all js-compile js-minify",
+    "js-compile": "rollup src/js/momi-css.js --file dist/js/momi-css.js",
+    "js-minify": "terser src/js/momi-css.js -o src/js/momi-css.min.js",
+    "watch": "npm-run-all watch-css watch-js",
+    "watch-css": "nodemon --watch src/css --exec \"npm run css\"",
+    "watch-js": "nodemon --watch src/js --exec \"npm run js\""
+  },
   "files": [
     "src/",
     "dist/",
@@ -13,13 +25,15 @@
     "autoprefixer": "^10.4.20",
     "postcss": "^8.5.3",
     "postcss-cli": "^11.0.0",
+    "rollup": "^4.34.9",
     "sass": "^1.85.1"
   },
   "devDependencies": {
-    "clean-css-cli": "^5.6.3",
+    "nodemon": "^3.1.9",
     "npm-run-all": "^4.1.5",
     "stylelint": "^16.15.0",
     "stylelint-config-idiomatic-css": "^1.1.0",
-    "stylelint-config-standard": "37.0.0"
+    "stylelint-config-standard": "37.0.0",
+    "terser": "^5.39.0"
   }
 }
