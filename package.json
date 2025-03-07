@@ -4,6 +4,12 @@
   "author": "development7777",
   "license": "MIT",
   "description": "Modern and minimalist CSS.",
+  "homepage": "https://github.com/development7777/momi-css#readme",
+  "bugs": "https://github.com/development7777/momi-css/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/development7777/momi-css.git"
+  },
   "scripts": {
     "start": "npm run watch",
     "css": "npm-run-all css-compile css-prefix",
@@ -22,14 +28,12 @@
     "dist/",
     "README.md"
   ],
-  "dependencies": {
+  "devDependencies": {
     "autoprefixer": "^10.4.20",
     "postcss": "^8.5.3",
     "postcss-cli": "^11.0.0",
     "rollup": "^4.34.9",
-    "sass": "^1.85.1"
-  },
-  "devDependencies": {
+    "sass": "^1.85.1",
     "http-server": "^14.1.1",
     "nodemon": "^3.1.9",
     "npm-run-all": "^4.1.5",
