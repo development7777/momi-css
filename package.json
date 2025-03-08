@@ -11,7 +11,7 @@
     "url": "https://github.com/development7777/momi-css.git"
   },
   "scripts": {
-    "start": "npm run watch",
+    "start": "npm-run-all -p watch test",
     "css": "npm-run-all css-compile css-prefix css-minify",
     "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css src/css/:dist/css",
     "css-prefix": "postcss --replace \"dist/css/*.css\" \"!dist/css/*.min.css\"",
@@ -22,7 +22,9 @@
     "watch": "npm-run-all watch-css watch-js",
     "watch-css": "nodemon --watch src/css --exec \"npm run css\"",
     "watch-js": "nodemon --watch src/js --exec \"npm run js\"",
-    "test": "http-server test/ -g"
+    "docs": "sassdoc src/css -t vulcan -d docs",
+    "docs-serve": "http-server docs/",
+    "test": "http-server -b"
   },
   "files": [
     "src/",
@@ -43,5 +45,9 @@
     "stylelint-config-idiomatic-css": "^1.1.0",
     "stylelint-config-standard": "37.0.0",
     "terser": "^5.39.0"
+  },
+  "dependencies": {
+    "sassdoc": "^2.7.4",
+    "sassdoc-theme-vulcan": "^0.2.0"
   }
 }
