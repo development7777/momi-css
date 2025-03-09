@@ -19,10 +19,12 @@
     "js": "npm-run-all js-compile js-minify",
     "js-compile": "rollup src/js/momi-css.js --file dist/js/momi-css.js",
     "js-minify": "terser src/js/momi-css.js -o src/js/momi-css.min.js",
-    "watch": "npm-run-all watch-css watch-js",
+    "watch": "npm-run-all -p watch-css watch-js",
     "watch-css": "nodemon --watch src/css --exec \"npm run css\"",
     "watch-js": "nodemon --watch src/js --exec \"npm run js\"",
-    "docs": "sassdoc src/css -t vulcan -d docs",
+    "watch-docs": "nodemon --watch src/css --exec \"npm run docs\"",
+    "docs": "npm-run-all -p watch-docs docs-compile docs-serve",
+    "docs-compile": "sassdoc src/css -c .sassdocrc.json",
     "docs-serve": "http-server docs/",
     "test": "http-server -b"
   },
@@ -36,7 +38,7 @@
     "clean-css-cli": "^5.6.3",
     "http-server": "^14.1.1",
     "nodemon": "^3.1.9",
-    "npm-run-all": "^4.1.5",
+    "npm-run-all2": "^7.0.2",
     "postcss": "^8.5.3",
     "postcss-cli": "^11.0.0",
     "rollup": "^4.34.9",
@@ -45,9 +47,5 @@
     "stylelint-config-idiomatic-css": "^1.1.0",
     "stylelint-config-standard": "37.0.0",
     "terser": "^5.39.0"
-  },
-  "dependencies": {
-    "sassdoc": "^2.7.4",
-    "sassdoc-theme-vulcan": "^0.2.0"
   }
 }
