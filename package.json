@@ -22,11 +22,7 @@
     "watch": "npm-run-all -p watch-css watch-js",
     "watch-css": "nodemon --watch src/css --exec \"npm run css\"",
     "watch-js": "nodemon --watch src/js --exec \"npm run js\"",
-    "watch-docs": "nodemon --watch src/css --exec \"npm run docs\"",
-    "docs": "npm-run-all -p watch-docs docs-compile docs-serve",
-    "docs-compile": "sassdoc src/css -c .sassdocrc.json",
-    "docs-serve": "http-server docs/",
-    "test": "http-server -b"
+    "test": "http-server test/ -b"
   },
   "files": [
     "src/",
