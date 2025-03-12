@@ -18,13 +18,14 @@
     "css-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/ --batch --batch-suffix \".min\" \"dist/css/*.css\" \"!dist/css/*.min.css\"",
     "js": "npm-run-all js-compile js-minify",
     "js-compile": "rollup src/js/momi-css.js --file dist/js/momi-css.js",
-    "js-minify": "terser src/js/momi-css.js -o src/js/momi-css.min.js",
+    "js-minify": "terser dist/js/momi-css.js -o dist/js/momi-css.min.js",
     "watch": "npm-run-all -p watch-css watch-js",
     "watch-css": "nodemon --watch src/css --exec \"npm run css\"",
     "watch-js": "nodemon --watch src/js --exec \"npm run js\"",
     "test": "http-server test/ -b",
-    "docs": "honkit build docs-md _docs",
-    "docs-serve": "honkit serve docs-md _docs",
+    "site": "npm-run-all docs-build site-serve",
+    "docs-build": "honkit build docs _site/docs",
+    "site-serve": "http-server _site -b"
   },
   "files": [
     "src/",
@@ -45,6 +46,7 @@
     "stylelint": "^16.15.0",
     "stylelint-config-idiomatic-css": "^1.1.0",
     "stylelint-config-standard": "37.0.0",
-    "terser": "^5.39.0"
+    "terser": "^5.39.0",
+    "gitbook-plugin-theme-api": "^1.1.2"
   }
 }

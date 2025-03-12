@@ -1,0 +1,6 @@
+{
+    "title": "momi-css Docs",
+    "description": "momi-cssの公式ドキュメント",
+    "author": "development7777",
+    "plugins": ["theme-api"]
+}
