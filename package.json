@@ -23,7 +23,9 @@
     "watch-css": "nodemon --watch src/css --exec \"npm run css\"",
     "watch-js": "nodemon --watch src/js --exec \"npm run js\"",
     "test": "http-server test/ -b",
-    "docs": "gitbook build docs-md _docs"
+    "docs": "gitbook build docs-md _docs",
+    "docs-serve": "gitbook serve docs-md _docs",
+    "docs-install": "gitbook install"
   },
   "files": [
     "src/",
@@ -33,7 +35,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "clean-css-cli": "^5.6.3",
-    "gitbook-cli": "^2.1.2",
+    "honkit": "^6.0.2",
     "http-server": "^14.1.1",
     "nodemon": "^3.1.9",
     "npm-run-all2": "^7.0.2",
