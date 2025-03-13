@@ -18,7 +18,7 @@
     "css-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/ --batch --batch-suffix \".min\" \"dist/css/*.css\" \"!dist/css/*.min.css\"",
     "js": "npm-run-all js-compile js-minify",
     "js-compile": "rollup src/js/momi-css.js --file dist/js/momi-css.js",
-    "js-minify": "terser dist/js/momi-css.js -o dist/js/momi-css.min.js",
+    "js-minify": "terser dist/js/momi-css.js -o dist/js/momi-css.min.js --comments \"/^!/\"",
     "watch": "npm-run-all -p watch-css watch-js",
     "watch-css": "nodemon --watch src/css --exec \"npm run css\"",
     "watch-js": "nodemon --watch src/js --exec \"npm run js\"",
