@@ -10,6 +10,7 @@
     "type": "git",
     "url": "https://github.com/development7777/momi-css.git"
   },
+  "type": "module",
   "scripts": {
     "start": "npm-run-all -p watch test",
     "css": "npm-run-all css-compile css-prefix css-minify",
@@ -17,8 +18,8 @@
     "css-prefix": "postcss --replace \"dist/css/*.css\" \"!dist/css/*.min.css\"",
     "css-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output dist/css/ --batch --batch-suffix \".min\" \"dist/css/*.css\" \"!dist/css/*.min.css\"",
     "js": "npm-run-all js-compile js-minify",
-    "js-compile": "rollup src/js/momi-css.js --file dist/js/momi-css.js",
-    "js-minify": "terser dist/js/momi-css.js -o dist/js/momi-css.min.js --comments \"/^!/\"",
+    "js-compile": "rollup src/js/momi-css.js --file dist/js/momi-css.js -c rollup.config.js",
+    "js-minify": "terser dist/js/momi-css.js -o dist/js/momi-css.min.js --comments '/^!/'",
     "watch": "npm-run-all -p watch-css watch-js",
     "watch-css": "nodemon --watch src/css --exec \"npm run css\"",
     "watch-js": "nodemon --watch src/js --exec \"npm run js\"",
@@ -33,8 +34,10 @@
     "README.md"
   ],
   "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
     "autoprefixer": "^10.4.20",
     "clean-css-cli": "^5.6.3",
+    "gitbook-plugin-theme-api": "^1.1.2",
     "honkit": "^6.0.2",
     "http-server": "^14.1.1",
     "nodemon": "^3.1.9",
@@ -46,7 +49,6 @@
     "stylelint": "^16.15.0",
     "stylelint-config-idiomatic-css": "^1.1.0",
     "stylelint-config-standard": "37.0.0",
-    "terser": "^5.39.0",
-    "gitbook-plugin-theme-api": "^1.1.2"
+    "terser": "^5.39.0"
   }
 }
